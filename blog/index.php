@@ -70,8 +70,6 @@ include_once('../config.php');
             $content = $row['content'];
             $date = $row['date'];
 
-            $admin = "<div><a href='del_post.php?pid=$id'>Delete</a> | <a href='edit_post.php?pid=$id'>Edit</a></div>";
-
             $output = $bbcode->Parse($content);
 
             $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin<hr /></div>";
@@ -80,10 +78,18 @@ include_once('../config.php');
     }
     else {
         echo 'There are no posts to display!';
+    }?><br><?php
+    if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+        echo "<a href='admin.php'>Admin panel</a> | <a href='../uitloggen.php'>Uitloggen</a>";
+    }
+    if (!isset($_SESSION['username'])) {
+        echo "<a href='../login_form.php'>Login</a>";
+    }
+    if (isset($_SESSION['username']) && !isset($_SESSION['admin'])) {
+        echo "<a href='../uitloggen.php'>logout</a>";
     }
 
     ?>
-<br><a href="post.php">Toevoegen</a>
 </div>
 
 
