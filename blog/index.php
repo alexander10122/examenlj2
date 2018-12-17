@@ -83,7 +83,7 @@ include_once('../config.php');
     }
 
     ?>
-<a href="post.php">Toevoegen</a>
+<br><a href="post.php">Toevoegen</a>
 </div>
 
 
