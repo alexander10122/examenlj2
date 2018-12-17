@@ -25,6 +25,9 @@ if (isset($_GET['submit'])) {
         if ($count > 0) {
             $_SESSION['username'] = $uname;
             $_SESSION['ingelogd'] = "ja";
+            if($admin == 1) {
+                $_SESSION['admin'] = 1;
+            }
             header('Location: index.php');
         } else {
             echo "Invalid username and password";
