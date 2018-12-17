@@ -70,6 +70,8 @@ include_once('../config.php');
             $content = $row['content'];
             $date = $row['date'];
 
+            $admin = "<div><a href='del_post.php?pid=$id'>Delete</a> | <a href='edit_post.php?pid=$id'>Edit</a></div>";
+
             $output = $bbcode->Parse($content);
 
             $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p><hr /></div>";
