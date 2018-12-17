@@ -13,11 +13,13 @@ body{
     background-color: #F7F7F7;
 
 }
-#lange-border {
-    border: solid #8CC63E;
-    display: flex;
-    margin-left: 22vw;
-    margin-top: 21vw;
+
+#grote-blok {
+    background-color: #8CC63E;
+    width: 80vw;
+    height: 80vh;
+    margin-left: 12vw;
+    margin-top: 10vh;
     position: absolute;
 
 }
