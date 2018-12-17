@@ -11,14 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Technolab Stagairspot</title>
-
-    <style>
-
-
-
-    </style>
 </head>
-<body>
 <header>
     <div class="custom=padding">
         <nav>
@@ -42,19 +35,20 @@
 
                             }
                             else{
-                                header("Location: ../login_form.html");
+                                header("Location: ../login_form.php");
                             }
-                            
+
                             ?>
                         </a>
                     </div>
                 </div>
     </div>
 </header>
+<body>
 
 
 
 
-<footer id="copyright">&copy; Technolab Leiden</footer>
 </body>
+<footer id="copyright">&copy; Technolab Leiden</footer>
 </html>
