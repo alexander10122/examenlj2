@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once('../config.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +52,10 @@
 <body>
 
 <div id="grote-blok">
+    <?php
+    include_once("nbbc/nbbc.php");
+    
+    ?>
 
 </div>
 
