@@ -72,8 +72,10 @@
             2312 WC Leiden</td>
     </tr>
 </table>
+    <div id="contact-form">
 
-    
+
+    </div>
 
 <footer id="copyright">&copy; Technolab Leiden</footer>
 </body>
