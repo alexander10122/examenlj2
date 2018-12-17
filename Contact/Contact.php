@@ -5,6 +5,10 @@ if(isset($_POST['submit'])) {
     $onderwerp = $_POST['onderwerp'];
     $email = $_POST['email'];
     $bericht = $_POST['bericht'];
+//controlleert of alle velden zijn ingevuld voordat hij verwerkings procces verder laat gaan
+if ($naam == "" || $onderwerp == "" || $email == "" || $beriht == "") {
+    echo 'oeps! Je bent een veld vergeten in te vullen! probeer het nog eens';
+}
 }
 ?>
 <!DOCTYPE html>
