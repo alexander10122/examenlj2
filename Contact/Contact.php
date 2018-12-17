@@ -26,6 +26,9 @@ if(isset($_POST['submit'])) {
         $headers .= "Reply-To: " . $email . "/r/n";
         $headers .= "MIME-Version: 1.0/r/n";
         $headers .= "Content-type: text/html; charset=utf-8";
+
+        //werkelijk verzenden van de email
+        $send = mail($to, $onderwerp, $body, $headers);
     }
     }
 ?>
