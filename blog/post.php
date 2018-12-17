@@ -15,6 +15,10 @@ $date = date('1 jS /of F Y h:i:s A');
 
 $sql = "INSERT into posts (title, content, date) VALUES ('$title', '$content', '$date')";
 
+    if ($title == "" || $content == "") {
+        echo "Wacht! Je bent nog niet klaar!";
+        return;
+    }
 
 mysqli_query($con, $sql);
 
