@@ -13,6 +13,28 @@ if(!isset($_GET['pid'])) {
 
 $pid = $_GET['pid'];
 
+if(isset($_POST['post'])) {
+    $title = strip_tags($_POST['title']);
+    $content = strip_tags($_POST['content']);
+
+    $title = mysqli_real_escape_string($con, $title);
+    $content = mysqli_real_escape_string($con, $content);
+
+    $date = date('1 jS /of F Y h:i:s A');
+
+    $sql = "INSERT into posts (title, content, date) VALUES ('$title', '$content', '$date')";
+
+
+    if ($title == "" || $content == "") {
+        echo "Please complete your post!";
+        return;
+    }
+    mysqli_query($con, $sql);
+
+    header("Location: index.php");
+
+}
+
 
 ?>
 
