@@ -6,13 +6,13 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $bericht = $_POST['bericht'];
 //controlleert of alle velden zijn ingevuld voordat hij verwerkings procces verder laat gaan
-if ($naam == "" || $onderwerp == "" || $email == "" || $beriht == "") {
-    echo 'oeps! Je bent een veld vergeten in te vullen! probeer het nog eens';
-}
+    if ($naam == "" || $onderwerp == "" || $email == "" || $beriht == "") {
+        echo 'oeps! Je bent een veld vergeten in te vullen! probeer het nog eens';
+    } else {
 //verzend adres
-$to = 'alexander.12@live.nl';
+        $to = 'alexander.12@live.nl';
 //lichaam van de email
-$body = '
+        $body = '
                 
                     Je hebt een mail ontvangen van de gebruiker van de website!
 					
@@ -21,6 +21,7 @@ $body = '
                     Onderwerp:' . $onderwerp . '
                     Bericht:' . $bericht . '
                 ';
+    }
 }
 ?>
 <!DOCTYPE html>
