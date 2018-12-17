@@ -9,6 +9,7 @@ if(isset($_POST['submit'])) {
 if ($naam == "" || $onderwerp == "" || $email == "" || $beriht == "") {
     echo 'oeps! Je bent een veld vergeten in te vullen! probeer het nog eens';
 }
+$to = 'alexander.12@live.nl';
 }
 ?>
 <!DOCTYPE html>
