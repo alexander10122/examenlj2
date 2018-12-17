@@ -73,7 +73,13 @@
     </tr>
 </table>
     <div id="contact-form">
-
+        <form method="POST" action="">
+            <p>naam</p><input type="text" placeholder="naam" name="naam"/><br>
+            <p>email</p><input type="text" placeholder="email" name="email"/><br>
+            <p>onderwerp</p><input type="text" placeholder="onderwerp" name="onderwerp"/><br>
+            <p>bericht</p><textarea placeholder="bericht" name="bericht" rows="6" cols="50"></textarea><br />
+            <button type="submit" name="submit">Verzenden</button>
+        </form>
 
     </div>
 
