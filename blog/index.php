@@ -54,7 +54,15 @@ include_once('../config.php');
 <div id="grote-blok">
     <?php
     include_once("nbbc/nbbc.php");
-    
+
+    $bbcode = new BBCode;
+
+            $sql = "SELECT * FROM posts ORDER BY id DESC";
+
+        $res = mysqli_query($con, $sql) or die(mysqli_error());
+
+        $posts = "";
+
     ?>
 
 </div>
