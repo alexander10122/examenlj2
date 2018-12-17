@@ -74,7 +74,7 @@ include_once('../config.php');
 
             $output = $bbcode->Parse($content);
 
-            $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p><hr /></div>";
+            $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin<hr /></div>";
         }
         echo $posts;
     }
