@@ -16,10 +16,10 @@ if(isset($_POST['submit'])) {
                 
                     Je hebt een mail ontvangen van de gebruiker van de website!
 					
-                    Name:' . $naam . '
-                    Email:' . $email . '
-                    Onderwerp:' . $onderwerp . '
-                    Bericht:' . $bericht . '
+                    Name: ' . $naam . '
+                    Email: ' . $email . '
+                    Onderwerp: ' . $onderwerp . '
+                    Bericht: ' . $bericht . '
                 ';
         //configuratie van de mail
         $headers = "From: " . $naam . " <" . $email . ">/r/n";
