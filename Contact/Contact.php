@@ -1,6 +1,10 @@
 <?php
 if(isset($_POST['submit'])) {
-
+    //variables van contact formulier
+    $naam = $_POST['naam'];
+    $onderwerp = $_POST['onderwerp'];
+    $email = $_POST['email'];
+    $bericht = $_POST['bericht'];
 }
 ?>
 <!DOCTYPE html>
