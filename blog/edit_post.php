@@ -52,7 +52,12 @@ include_once('../config.php');
 <body>
 
 <div id="grote-blok">
+    <?php
 
+    $sql_get = "SELECT * FROM posts WHERE id=$pid LIMIT 1";
+    $res = mysqli_query($con, $sql_get);
+
+?>
 </div>
 
 
