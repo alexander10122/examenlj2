@@ -57,10 +57,16 @@ include_once('../config.php');
     $sql_get = "SELECT * FROM posts WHERE id=$pid LIMIT 1";
     $res = mysqli_query($con, $sql_get);
 
-    echo "<form action='edit_post.php?pid=$pid' method='post' enctype='multipart/form-data'>";
-    echo "<input placeholder='Title' name='title' type='text' autofocus value='$title' size='48'><br /><br />";
-    echo  "<textarea placeholder='Content' name='content' rows='20' cols='50'>$content</textarea><br />";
+    if (mysqli_num_rows($res) > 0) {
+        while ($row = mysqli_fetch_assoc($res)) {
+            $title = $row['title'];
+            $content = $row['content'];
 
+            echo "<form action='edit_post.php?pid=$pid' method='post' enctype='multipart/form-data'>";
+            echo "<input placeholder='Title' name='title' type='text' autofocus value='$title' size='48'><br /><br />";
+            echo "<textarea placeholder='Content' name='content' rows='20' cols='50'>$content</textarea><br />";
+        }
+    }
 ?>
     <input name="update" type="submit" value="update"/>
     </form>
