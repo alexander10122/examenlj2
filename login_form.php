@@ -12,12 +12,13 @@ if (isset($_GET['submit'])) {
         $sql_query = "select count(*) as cntUser from account where username='" . $uname . "' and password='" . $password . "'";
         $result = mysqli_query($con, $sql_query);
         $row = mysqli_fetch_array($result);
-        
+
         $sql_query2 = "select admin from account where username='" . $uname . "'";
         $result2 = mysqli_query($con, $sql_query2);
         $row2 = mysqli_fetch_array($result2);
 
 
+        $admin = $row2['admin'];
 
         $count = $row['cntUser'];
 
