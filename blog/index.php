@@ -63,6 +63,21 @@ include_once('../config.php');
 
         $posts = "";
 
+    if(mysqli_num_rows($res) > 0) {
+        while($row = mysqli_fetch_assoc($res)) {
+            $id = $row['id'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $date = $row['date'];
+
+            $output = $bbcode->Parse($content);
+
+            $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p><hr /></div>";
+        }
+        echo $posts;
+
+    }
+
     ?>
 
 </div>
