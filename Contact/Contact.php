@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
         //verzend melding
         echo 'Je email is verzonden! je ontvangt binnen 24 uur een reactie';
         //wordt ergens heen gestuurd zodra de email is verzonden
-        header( "refresh:5;url=https://https://www.alexanderwallaard.technolabstagiairs.nl/Contact/Contact.php" );
+        header( "refresh:5;url=https://www.alexanderwallaard.technolabstagiairs.nl/Contact/Contact.php" );
     }
     }
 ?>
