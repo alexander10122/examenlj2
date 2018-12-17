@@ -30,8 +30,10 @@ if(isset($_POST['submit'])) {
         //werkelijk verzenden van de email
         $send = mail($to, $onderwerp, $body, $headers);
 
+        //verzend melding
+        echo 'Je email is verzonden! je ontvangt binnen 24 uur een reactie';
         //wordt ergens heen gestuurd zodra de email is verzonden
-        header( "refresh:0.1;url=https://https://www.alexanderwallaard.technolabstagiairs.nl/Contact/Contact.php" );
+        header( "refresh:5;url=https://https://www.alexanderwallaard.technolabstagiairs.nl/Contact/Contact.php" );
     }
     }
 ?>
