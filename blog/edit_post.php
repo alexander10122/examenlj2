@@ -7,6 +7,13 @@ if(!isset($_SESSION['username'])) {
     return;
 }
 
+if(!isset($_GET['pid'])) {
+    header("Location: index.php");
+}
+
+$pid = $_GET['pid'];
+
+
 ?>
 
 <!DOCTYPE html>
