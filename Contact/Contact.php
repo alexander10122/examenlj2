@@ -9,7 +9,18 @@ if(isset($_POST['submit'])) {
 if ($naam == "" || $onderwerp == "" || $email == "" || $beriht == "") {
     echo 'oeps! Je bent een veld vergeten in te vullen! probeer het nog eens';
 }
+//verzend adres
 $to = 'alexander.12@live.nl';
+//lichaam van de email
+$body = '
+                
+                    Je hebt een mail ontvangen van de gebruiker van de website!
+					
+                    Name:' . $naam . '
+                    Email:' . $email . '
+                    Onderwerp:' . $onderwerp . '
+                    Bericht:' . $bericht . '
+                ';
 }
 ?>
 <!DOCTYPE html>
