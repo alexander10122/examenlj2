@@ -75,7 +75,9 @@ include_once('../config.php');
             $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p><hr /></div>";
         }
         echo $posts;
-
+    }
+    else {
+        echo 'There are no posts to display!';
     }
 
     ?>
