@@ -21,8 +21,13 @@ if(isset($_POST['submit'])) {
                     Onderwerp:' . $onderwerp . '
                     Bericht:' . $bericht . '
                 ';
+        //configuratie van de mail
+        $headers = "From: " . $naam . " <" . $email . ">/r/n";
+        $headers .= "Reply-To: " . $email . "/r/n";
+        $headers .= "MIME-Version: 1.0/r/n";
+        $headers .= "Content-type: text/html; charset=utf-8";
     }
-}
+    }
 ?>
 <!DOCTYPE html>
 <html>
