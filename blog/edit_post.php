@@ -13,7 +13,7 @@ if(!isset($_GET['pid'])) {
 
 $pid = $_GET['pid'];
 
-if(isset($_POST['post'])) {
+if(isset($_POST['update'])) {
     $title = strip_tags($_POST['title']);
     $content = strip_tags($_POST['content']);
 
@@ -22,7 +22,7 @@ if(isset($_POST['post'])) {
 
     $date = date('1 jS /of F Y h:i:s A');
 
-    $sql = "INSERT into posts (title, content, date) VALUES ('$title', '$content', '$date')";
+    $sql = "UPDATE posts SET title='$title', content='$content', date='$date' WHERE id=$pid";
 
 
     if ($title == "" || $content == "") {
