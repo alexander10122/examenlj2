@@ -52,7 +52,11 @@ include_once('../config.php');
 <body>
 
 <div id="grote-blok">
-
+    <form action="post.php" method="post" enctype="multipart/form-data">
+        <input placeholder="Title" name="title" type="text" autofocus size="48"><br /><br />
+        <textarea placeholder="Content" name="content" rows="20" cols="50"></textarea><br />
+        <input name="post" type="submit" value="Post">
+    </form>
 </div>
 
 
