@@ -40,6 +40,7 @@ if($count == 0) {
     <input type="text" name="search" placeholder="zoeken"/>
     <button type="submit" name="submit-zoeken">Zoeken</button>
 </form>
+<?php print("$output"); ?>
 </body>
     <footer id="copyright">&copy; Technolab Leiden</footer>
 </html>
