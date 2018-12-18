@@ -11,6 +11,15 @@ if($count == 0) {
     $output = "there was no search results!";
 
 }else {
+    while($row = mysqli_fetch_array($query)) {
+        $title = $row['title'];
+        $content = $row['content'];
+        $date = $row['date'];
+        $id = $row['id'];
+
+        $output .= '<div>'.'Date: '.$date.'<br>'.'Titel: '.$title.'<br>'.'inhoud: '.$content.'';
+    }
+}
 }
 ?>
 <!DOCTYPE html>
