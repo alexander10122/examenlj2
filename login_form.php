@@ -13,11 +13,21 @@ if (isset($_GET['submit'])) {
         $result = mysqli_query($con, $sql_query);
         $row = mysqli_fetch_array($result);
 
+        $sql_query2 = "select admin from account where username='" . $uname . "'";
+        $result2 = mysqli_query($con, $sql_query2);
+        $row2 = mysqli_fetch_array($result2);
+
+
+        $admin = $row2['admin'];
+
         $count = $row['cntUser'];
 
         if ($count > 0) {
             $_SESSION['username'] = $uname;
             $_SESSION['ingelogd'] = "ja";
+            if($admin == 1) {
+                $_SESSION['admin'] = 1;
+            }
             header('Location: index.php');
         } else {
             echo "Invalid username and password";
