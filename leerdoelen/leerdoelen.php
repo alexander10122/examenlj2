@@ -27,6 +27,7 @@
                 <li><a href="../Workshops/Workshop.php">Workshops</a></li>
                 <li><a href="../agenda/agenda.php">Agenda</a></li>
                 <li><a href="leerdoelen.php">Leerdoelen</a></li>
+                <li><a href="../blog/index.php">Blog</a></li>
                 <li><a href="../Contact/Contact.php">Contact</a></li>
                 <div class="dropdown">
                     <li><a class="dropbtn">&#9881;
