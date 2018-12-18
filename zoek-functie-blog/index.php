@@ -1,6 +1,12 @@
 <?php
 session_start();
 include_once('../config.php');
+
+if(isset($_POST['search'])) {
+    $searchq = $_POST['search'];
+
+
+}
 ?>
 <!DOCTYPE html>
 <html style="background-color: #8CC63E">
