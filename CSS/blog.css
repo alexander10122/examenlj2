@@ -13,6 +13,14 @@ body{
     background-color: #F7F7F7;
 
 }
+#zoeklink {
+    margin-top: 67vh;
+    margin-left: -15vw;
+    font-size: 25px;
+    position: absolute;
+    color: rebeccapurple;
+    text-decoration-line: none;
+}
 
 #grote-blok {
     background-color: #8CC63E;
