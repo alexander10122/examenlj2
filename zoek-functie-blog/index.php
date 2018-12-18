@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: #8CC63E">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Stagair local spot">
@@ -11,6 +11,10 @@
 <header>
 </header>
 <body>
+<form action="index.php" method="POST">
+    <input type="text" name="search" placeholder="zoeken"/>
+    <button type="submit" name="submit-zoeken">Zoeken</button>
+</form>
 </body>
     <footer id="copyright">&copy; Technolab Leiden</footer>
 </html>
