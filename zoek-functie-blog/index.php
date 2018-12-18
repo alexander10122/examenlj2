@@ -5,7 +5,7 @@ include_once('../config.php');
 if(isset($_POST['search'])) {
     $searchq = $_POST['search'];
 
-$query = mysqli_query($con, "SELECT * FROM posts WHERE title LIKE '%$searchq%' OR content LIKE '%$searchq%' OR date LIKE '%$date%'") or die("Could not search!");
+$query = mysqli_query($con, "SELECT * FROM posts WHERE title LIKE '%$searchq%' OR content LIKE '%$searchq%'") or die("Could not search!");
 $count = mysqli_num_rows($query);
 if($count == 0) {
     $output = "there was no search results!";
