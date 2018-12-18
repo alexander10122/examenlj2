@@ -17,16 +17,15 @@ if($count == 0) {
         $date = $row['date'];
         $id = $row['id'];
 
-        $output .= '<div>'.'Date: '.$date.'<br>'.'Titel: '.$title.'<br>'.'inhoud: '.$content.'';
+        $output .= '<div style="background-color: #8CC63E">'.'Date: '.$date.'<br>'.'Titel: '.$title.'<br>'.'inhoud: '.$content.'';
     }
 }
 }
 ?>
 <!DOCTYPE html>
-<html style="background-color: #8CC63E">
+<html style="background-color: #8CC63E; text-align: center">
 <head>
     <meta charset="UTF-8">
-    <link href="../CSS/blog.css" rel="stylesheet" type="text/css">
     <meta name="description" content="Stagair local spot">
     <meta name="keywords" content="Technolab, Stagairs, Workshops">
     <meta name="author" content="Ravi Breugom, Alexander Wallaard, Natascha van Baal">
@@ -36,11 +35,11 @@ if($count == 0) {
 <header>
 </header>
 <body>
-<form action="index.php" method="POST">
+<form action="index.php" method="POST" style="background-color: #8CC63E">
     <input type="text" name="search" placeholder="zoeken"/>
     <button type="submit" name="submit-zoeken">Zoeken</button>
 </form>
 <?php print("$output"); ?>
 </body>
-    <footer id="copyright">&copy; Technolab Leiden</footer>
+    <footer></footer>
 </html>

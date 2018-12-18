@@ -14,10 +14,10 @@ body{
 
 }
 #zoeklink {
-    margin-top: 67vh;
+    margin-top:10vh;
+    position: absolute;
     margin-left: -15vw;
     font-size: 25px;
-    position: absolute;
     color: rebeccapurple;
     text-decoration-line: none;
 }
@@ -25,7 +25,7 @@ body{
 #grote-blok {
     background-color: #8CC63E;
     width: 80vw;
-    height: 80vh;
+    height: auto;
     margin-left: 12vw;
     margin-top: 10vh;
     position: absolute;
