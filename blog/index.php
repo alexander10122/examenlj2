@@ -7,7 +7,7 @@ include_once('../config.php');
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../CSS/blog.css">
-    <script src="js/js.js"></script>
+    <script src="../JS/zoekbar.js"></script>
     <meta charset="UTF-8">
     <meta name="description" content="Stagair local spot">
     <meta name="keywords" content="Technolab, Stagairs, blog">
@@ -90,6 +90,7 @@ include_once('../config.php');
     }
 
     ?>
+    <a href="../zoek-functie-blog/index.php" onclick="zoekbrowser()">Zoek!</a>
 </div>
 
 
