@@ -11,7 +11,7 @@ $content = strip_tags($_POST['content']);
 $title = mysqli_real_escape_string($con, $title);
 $content = mysqli_real_escape_string($con, $content);
 
-$date = date('1 jS /of F Y h:i:s A');
+$date = date('1 jS o F Y h:i:s A');
 
 $sql = "INSERT into posts (title, content, date) VALUES ('$title', '$content', '$date')";
 
