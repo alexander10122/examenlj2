@@ -90,7 +90,7 @@ include_once('../config.php');
     }
 
     ?>
-    <a href="../zoek-functie-blog/index.php" onclick="zoekbrowser()">Zoek!</a>
+    <a href="../zoek-functie-blog/index.php" onclick="zoekbrowser(this.href);return false">Zoek!</a>
 </div>
 
 
