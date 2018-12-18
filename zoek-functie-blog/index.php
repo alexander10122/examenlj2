@@ -1,7 +1,12 @@
+<?php
+session_start();
+include_once('../config.php');
+?>
 <!DOCTYPE html>
 <html style="background-color: #8CC63E">
 <head>
     <meta charset="UTF-8">
+    <link href="../CSS/blog.css" rel="stylesheet" type="text/css">
     <meta name="description" content="Stagair local spot">
     <meta name="keywords" content="Technolab, Stagairs, Workshops">
     <meta name="author" content="Ravi Breugom, Alexander Wallaard, Natascha van Baal">
