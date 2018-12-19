@@ -52,14 +52,14 @@ if (isset($_GET['submit'])) {
     <title>Technolab Stagairspot</title>
 </head>
 <header>
-    <button id="button-nieuw" href="registratie/reg_form.php"><a href="registratie/reg_form.php" id="font3">Ben je
+    <button id="button-nieuw" class="desktop" href="registratie/reg_form.php"><a href="registratie/reg_form.php" class="desktop" id="font3">Ben je
             nieuw? klik hier</a></button>
-    <img id="logo" alt="Logo Technolab" src="img/WhatsApp%20Image%202018-09-20%20at%2010.44.00.jpeg">
+    <img id="logo" class="desktop" alt="Logo Technolab" src="img/WhatsApp%20Image%202018-09-20%20at%2010.44.00.jpeg">
 </header>
 <body>
 
 
-<form id="form-login" method="GET" action="">
+<form id="form-login" class="desktop" method="GET" action="">
     <div id="font1">username</div>
     <input class="kleur-input" type="text" name="username"/><br>
     <div id="font2">password</div>
@@ -72,6 +72,6 @@ if (isset($_GET['submit'])) {
 </body>
 
 
-<footer id="copyright">&copy; Technolab Leiden</footer>
+<footer id="copyright" class="desktop" >&copy; Technolab Leiden</footer>
 </body>
 </html> 
