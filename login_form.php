@@ -59,7 +59,7 @@ if (isset($_GET['submit'])) {
 <body>
 
 <div class="mobile button">
-<p>Deze browser ondersteunen geen platforms op telefoons</p><br><button>naar desktop versie</button>
+<p>Deze website ondersteunt geen telefoons</p><br><button>naar desktop versie</button>
 </div>
 
 <form id="form-login" class="desktop" method="GET" action="">
