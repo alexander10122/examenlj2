@@ -43,7 +43,7 @@ if (isset($_GET['submit'])) {
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script src="JS/js.js"></script>
+    <script src="JS/desktop.js"></script>
     <meta charset="UTF-8">
     <meta name="description" content="Stagair local spot">
     <meta name="keywords" content="Technolab, Stagairs, Workshops">
@@ -59,7 +59,7 @@ if (isset($_GET['submit'])) {
 <body>
 
 <div class="mobile button">
-<p>Deze website ondersteunt geen telefoons</p><br><button>naar desktop versie</button>
+<p>Deze website ondersteunt geen telefoons</p><br><button onclick="naardesktop()">naar desktop versie</button>
 </div>
 
 <form id="form-login" class="desktop" method="GET" action="">
