@@ -1,7 +1,8 @@
 <?php
 session_start();
 include_once('../config.php');
-if(!isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
+//checkt of de gebruiker een admmin is, zo niet? dan keert de gebruiker terug naar de login form
+if (!isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
     header("Location: ../login_form.php");
     return;
 }
@@ -58,27 +59,27 @@ if(!isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
 
 <div id="grote-blok">
     <?php
+    //voert sql query uit, wanneer hij een fout ziet laat hij het zien met een error code
     $sql = "SELECT * FROM posts ORDER BY id DESC";
-
     $res = mysqli_query($con, $sql) or die(mysqli_error());
-
+    //maakt de variable $posts aan
     $posts = "";
-
-    if(mysqli_num_rows($res) > 0) {
-        while($row = mysqli_fetch_assoc($res)) {
+    //echo't alle resultaten
+    if (mysqli_num_rows($res) > 0) {
+        while ($row = mysqli_fetch_assoc($res)) {
             $id = $row['id'];
             $title = $row['title'];
             $date = $row['date'];
-
+    //maakt admin controls en geeft ze mee aan de variable $admin
             $admin = "<div><a href='del_post.php?pid=$id'>Delete</a> | <a href='edit_post.php?pid=$id'>Edit</a></div>";
-
-
-
+    //$posts krijgt alle posts binnen met de admin controls
             $posts .= "<div><h2><a href 'view_post.php?pid=$id' target='_blank'>$title</a></h2><h3>$date</h3>$admin<hr /></div>";
         }
+        //echo't alle posts uit de database
         echo $posts;
 
     } else {
+        //laat een echo zien als er geen posts aanwezig is
         echo 'There are no posts to display!';
     }
     ?>

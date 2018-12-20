@@ -13,7 +13,6 @@ if(isset($_POST['submit'])) {
         $to = 'alexander.12@live.nl';
 //lichaam van de email
         $body = '
-                
                     Je hebt een mail ontvangen van de gebruiker van de website!
 					
                     Name: ' . $naam . '
@@ -29,7 +28,6 @@ if(isset($_POST['submit'])) {
 
         //werkelijk verzenden van de email
         $send = mail($to, $onderwerp, $body, $headers);
-
         //verzend melding
 ?><div id="verzend-melding"><?php echo 'Je email is verzonden! je ontvangt binnen 24 uur een reactie';?></div><?php
         //wordt ergens heen gestuurd zodra de email is verzonden

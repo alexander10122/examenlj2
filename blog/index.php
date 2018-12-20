@@ -54,32 +54,30 @@ include_once('../config.php');
 
 <div id="grote-blok">
     <?php
+    //bb engine, hiermee kunnen ze hun tekst leuk/mooi maken
     include_once("nbbc/nbbc.php");
-
     $bbcode = new BBCode;
-
+    //voert een query uit
             $sql = "SELECT * FROM posts ORDER BY id DESC";
-
         $res = mysqli_query($con, $sql) or die(mysqli_error());
-
         $posts = "";
-
+        //checkt het aantal resultaten en als hij resultaten heeft dan laat hij ze zien
     if(mysqli_num_rows($res) > 0) {
         while($row = mysqli_fetch_assoc($res)) {
             $id = $row['id'];
             $title = $row['title'];
             $content = $row['content'];
             $date = $row['date'];
-
             $output = $bbcode->Parse($content);
-
             $posts .= "<div><h2><a href 'view_post.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin<hr /></div>";
         }
         echo $posts;
     }
     else {
+        //laat een echo zien wanneer er geen posts aanwezig zijn
         echo 'There are no posts to display!';
     }?><br><?php
+    //controles om te kijken of de gebruiker een admin is of niet
     if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
         echo "<a href='admin.php'>Admin panel</a> | <a href='../uitloggen.php'>Uitloggen</a>";
     }
@@ -91,6 +89,7 @@ include_once('../config.php');
     }
 
     ?>
+    <!--onclick wat er voor zorgt dat er een zoek pop-up opent waar je vervolgens iets in kunt zoeken-->
     <a id="zoeklink" href="../zoek-functie-blog/index.php" onclick="zoekbrowser(this.href);return false">Teveel posts? Klik hier om te zoeken!</a>
 </div>
 

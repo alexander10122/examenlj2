@@ -1,41 +1,38 @@
 <?php
 session_start();
 include_once('../config.php');
-
+//checkt of de gebruiker is ongelogd, zo niet? dan wordt de gebruiker terug gestuurd naar de login page anders mag de gebruiker zijn weg vervolgen
 if(!isset($_SESSION['username'])) {
     header("Location: login_form.php");
     return;
 }
-
+//als php niet een pid meekrijgt van de index/admin pagina dan wordt de gebruiker naar de homepage gestuurd
 if(!isset($_GET['pid'])) {
     header("Location: index.php");
 }
-
+//maakt een variable $pid aan en slaat daar de pid op die hij heeft mee gekregen vanaf de admin pagina
 $pid = $_GET['pid'];
-
+//als de gebruiker de gegevens verstuurd vanaf de update form dan wordt dit stukje code actief
 if(isset($_POST['update'])) {
+    //beveiligd de form tegen injection hacking
     $title = strip_tags($_POST['title']);
     $content = strip_tags($_POST['content']);
-
     $title = mysqli_real_escape_string($con, $title);
     $content = mysqli_real_escape_string($con, $content);
-
+    //geeft variable $date de huidige datum
     $date = date('1 jS /of F Y h:i:s A');
-
+    //maakt de variable $sql aan en geeft daar een query aan mee
     $sql = "UPDATE posts SET title='$title', content='$content', date='$date' WHERE id=$pid";
-
-
+//checkt of de form wel volledig is ingevuld anders laat een echo zien en stop de sql uitvoer proces
     if ($title == "" || $content == "") {
         echo "Please complete your post!";
         return;
     }
+    //sql query wordt uitgevoerd
     mysqli_query($con, $sql);
-
+    //gebruiker wordt terug gestuurd naar de index
     header("Location: index.php");
-
 }
-
-
 ?>
 
 <!DOCTYPE html>

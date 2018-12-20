@@ -1,35 +1,26 @@
 <?php
 session_start();
 include_once('../config.php');
-
-
-
 if(isset($_POST['post'])) {
+    //controleert de ingezonde gegevens van de
 $title = strip_tags($_POST['title']);
 $content = strip_tags($_POST['content']);
-
 $title = mysqli_real_escape_string($con, $title);
 $content = mysqli_real_escape_string($con, $content);
-
+//maakt variable variable datw aan en gooit er de huidige datum in
 $date = date('1 jS o F Y h:i:s A');
-
+//maakt de variable $sql aan en slaat de query erin op
 $sql = "INSERT into posts (title, content, date) VALUES ('$title', '$content', '$date')";
-
+//checkt of de invul velden wel allebij zijn ingevuld, zo niet? dan stopt hij de verwerking proces en laat hij een echo zien
     if ($title == "" || $content == "") {
         echo "Wacht! Je bent nog niet klaar!";
         return;
     }
-
+//voert de sql query uit
 mysqli_query($con, $sql);
-
-
+//stuurt de gebruiker naar de index wanneer alles is afgerond
 header("location: index.php");
-
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
